@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Void Security Services</title>
+    <script src="https://kit.fontawesome.com/122e805cd9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles/main.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="icon"  />
+</head>
+<body>
+    <div class="row page-row">
+        <div class="col-lg-3 col-md-2 first-column-content">
+            <h1 id="siteHeadline">
+                <div class="container text-center">
+                    <img src="./img/void.logo.png" alt="Logo" class="void-security-logo"/>
+                    <div style="text-align: center">
+                        <button class="mt-5 mb-5 g-start" hidden>Zero Gravity</button>
+                    </div>
+                    <div id="companyName">
+                        <p class="text-center" id="wbox">
+                            <span v-for="a in message">
+                                Void Security Services
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </h1>
+        </div>
+        <div class="col-lg-9 col-md-10">
+            <div id="floatingBox">
+                <div id="countdown">
+                    <span style="font-size: 2rem;">Site Launch In</span>
+                    <ul>
+                        <li><span id="days"></span>days</li>
+                        <li><span id="hours"></span>Hours</li>
+                        <li><span id="minutes"></span>Minutes</li>
+                        <li><span id="seconds"></span>Seconds</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container customSiteContainer">
+    <div id="container" class="gemContainer">
+        <i class="far fa-gem gemIcon"></i>
+        <div class="coruscate"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="js/countdown.js" type="text/javascript"></script>
+    <script src="js/antigravity.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        var gr_x = document.getElementById("gravity-x").value;
+        var gr_y = document.getElementById("gravity-y").value;
+
+        $(".start-g").click(function(){
+          $("span").addClass("test");
+          $(".test").throwable({
+            drag:true,
+            gravity:{x:gr_x,y:gr_y},
+            impulse:{
+              f:152,
+              p:{x:0,y:1.5}
+            },
+            shape:"circle",
+            autostart:false,
+            bounce:20,
+            damping:13,
+
+          });
+        });
+
+        $(".stop-g").click(function(){
+          $(".test").throwable({
+            gravity:{x:0,y:0},
+          });
+        });
+
+        $("#gravity-x, #gravity-y").click(function(){
+          var gr_x = document.getElementById("gravity-x").value;
+          var gr_y = document.getElementById("gravity-y").value;
+          $(".test").throwable({
+            gravity:{x:gr_x,y:gr_y},
+          });
+
+        });
+      });
+    </script>
+</div>
+</body>
+</html>
