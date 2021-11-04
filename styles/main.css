@@ -177,4 +177,9 @@ li span {
     li span {
         font-size: calc(3.375rem * var(--smaller));
     }
+
+    div#floatingBox {
+        max-width: 100%!important;
+        padding: 0!important;
+    }
 }
